@@ -5,6 +5,10 @@
 
 Console.WriteLine("Введите число");
 int number = Convert.ToInt32(Console.ReadLine());
+if (number < 0) 
+{
+    number = number * (-1);
+}
 
 if (number < 100) 
 {
