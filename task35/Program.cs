@@ -12,7 +12,7 @@ Random rand = new Random();
 for (int i = 0; i < Arr.Length; i++)
 {
     Arr[i] = rand.Next(0, 150);
-    if ((Arr[i] > 10) &&  (Arr[i] <100))
+    if ((Arr[i] >= 10) &&  (Arr[i] <= 100))
     {
         kol = kol + 1;
     }
