@@ -14,12 +14,14 @@ Random rand = new Random();
 for (int i = 0; i < Arr.Length; i++)
 {
     Arr[i] = rand.Next(-10, 10);
-    if ((i % 2) != 0 )
-    {
+    
+}
+
+for (int i = 1; i < Arr.Length; i+=2)
+{
         sum = sum + Arr [i];
     }
-}
-   
+
 Console.WriteLine(string.Join(", ", Arr));
 Console.WriteLine($"Cумма элементов на нечетных позициях = {sum}");
 
