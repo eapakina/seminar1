@@ -52,11 +52,11 @@ Console.Write("введите индекс искомого элемента ч�
 int indm = Convert.ToInt32(Console.ReadLine());
 int indn = Convert.ToInt32(Console.ReadLine());
 
-if ((indm > m) || (indn > n))
+if ((indm > m) || (indn > n) || (indn <= 0) || (indn <= 0))
 {
     Console.Write("такого числа в массиве нет "); 
 }
 else
 {
-    Console.Write(matrix[indm, indn]);
+    Console.Write(matrix[indm - 1, indn - 1]);
     }
