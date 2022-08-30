@@ -9,8 +9,9 @@
 
 Console.WriteLine("введите размерность");
 int n = Convert.ToInt32(Console.ReadLine()); //для упрощения делаем кубический массив с равными сторонами
-
-int[,,] matrix = new int[n, n, n];
+if (n*n*n < 100)
+{
+    int[,,] matrix = new int[n, n, n];
 
 int[] array = new int[n *n *n]; //формируем массив случайных неповторяющихся чисел
 Random rnd = new Random();
@@ -22,7 +23,7 @@ for  (int i =0; i < n * n * n; i++)
            {array[i] = rnd.Next(10, 100);
            j = 0; }}}
 
-Console.WriteLine(string.Join(", ", array));
+// Console.WriteLine(string.Join(", ", array));
 
 int count = 0;
 for  (int i =0; i < n ; i++)
@@ -57,3 +58,9 @@ for  (int i =0; i < n ; i++)
                       Console.WriteLine();
            }
         }     
+
+}
+else
+{
+    Console.WriteLine("неверно задано значение");
+}
