@@ -18,12 +18,12 @@ void PrintArray(string[] array)
 Console.Write("Количество элементов в массиве ");
 int size = Convert.ToInt32(Console.ReadLine());
 
-string[] arrayStrings = new string[size];
+string[] array = new string[size];
 for (int i = 0; i < size; i++)
 {
     Console.WriteLine($"Введите {i + 1} элемент: ");
     string symbol = Console.ReadLine()!;
-    arrayStrings[i] = symbol;
+    array[i] = symbol;
 }
 
 string[] arrayitog = new string[size];
@@ -32,9 +32,9 @@ int count = 0;
 
 for (int i = 0; i < size; i++)
 {
-    if (arrayStrings[i].Length <= length)
+    if (array[i].Length <= length)
     {
-        arrayitog[count] = arrayStrings[i];
+        arrayitog[count] = array[i];
         count++;
     }
 }
